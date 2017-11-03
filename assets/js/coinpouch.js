@@ -5,12 +5,28 @@ var clear       = require('clear');
 var CLI         = require('clui');
 var figlet      = require('figlet');
 var accountController      = require('./accountController');
-
+var networkController      = require('./networkController');
+var Web3 = require('web3');
 
 const GITHUB_URL = "https://www.github.com/admazzola/coinpouch";
 
 module.exports = {
 
+initCoinpouch(network_name)
+{
+
+  var web3 = new Web3(new Web3.providers.HttpProvider(networkController.getInfuraURL(network_name)))
+
+
+  console.log(web3)
+
+  var connected = web3.isConnected();
+    console.log(connected );
+
+  var balance = web3.eth.getBalance("0xfA71E45ef0f83eC0424B641690A41b5c0ddff10a" );
+  console.log(balance.toNumber() );
+
+},
 
 respondToConsoleArgs(argv)
 {
@@ -21,6 +37,7 @@ respondToConsoleArgs(argv)
   switch(primary_anonymous_arg)
   {
     case 'help': this.renderHelp(); break;
+    case 'network': networkController.respondToConsoleArgs(argv); break;
     case 'account': accountController.respondToConsoleArgs(argv); break;
     default: this.renderWelcome(); break;
   }

@@ -1,4 +1,8 @@
 
+var ethUtils = require('ethereumjs-util')
+var ethWallet = require('ethereumjs-wallet')
+
+
 module.exports = {
 
 
@@ -21,6 +25,10 @@ respondToConsoleArgs(argv)
 createNewAccount()
 {
   console.log('new account ')
+
+  var newWallet = ethWallet.generate();
+
+  console.log(ethUtils.bufferToHex(newWallet.getPrivateKey()))
 },
 
 renderAccountList()

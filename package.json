@@ -1,0 +1,15 @@
+{
+  "name": "coinpouch",
+  "version": "0.0.2",
+  "description": "A free open-source CLI wallet for digital currency. An integrated API allows apps and services to send and receive payments amongst eachother quickly and easily. ",
+  "main": "coinpouch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "coin"
+  ],
+  "author": "admazzola",
+  "license": "MIT"
+}

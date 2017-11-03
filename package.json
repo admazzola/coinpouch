@@ -1,6 +1,6 @@
 {
   "name": "coinpouch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A free open-source CLI wallet for digital currency. An integrated API allows apps and services to send and receive payments amongst eachother quickly and easily. ",
   "main": "coinpouch.js",
   "scripts": {
@@ -10,6 +10,12 @@
     "ethereum",
     "coin"
   ],
+
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/admazzola/coinpouch"
+  },
+
   "author": "admazzola",
   "license": "MIT"
 }

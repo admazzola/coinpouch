@@ -20,18 +20,32 @@ var files = require('./assets/js/files');
 var coinpouch = require('./assets/js/coinpouch');
 
 //clear();
-console.log(
-  chalk.white(
-    figlet.textSync('Coinpouch', { horizontalLayout: 'full' })
-  )
-);
 
 
-coinpouch.welcomeMessage(function(){
+
+/*coinpouch.welcomeMessage(function(){
   console.log(arguments);
 });
+*/
 
- 
+var argv = require('minimist')(process.argv.slice(2));
+
+
+/*  node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
+{ _: [ 'foo', 'bar', 'baz' ],
+  x: 3,
+  y: 4,
+  n: 5,
+  a: true,
+  b: true,
+  c: true,
+  beep: 'boop' }
+   */
+
+console.log('got args ')
+console.log(argv)
+
+coinpouch.respondToConsoleArgs(argv)
 
 /*if (files.directoryExists('.git')) {
   console.log(chalk.red('Already a git repository!'));

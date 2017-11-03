@@ -42,9 +42,6 @@ var argv = require('minimist')(process.argv.slice(2));
   beep: 'boop' }
    */
 
-console.log('got args ')
-console.log(argv)
-
 coinpouch.respondToConsoleArgs(argv)
 
 /*if (files.directoryExists('.git')) {

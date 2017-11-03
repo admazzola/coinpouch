@@ -1,5 +1,7 @@
 # Coinpouch
 
+ 
+
 A NodeJS light Ethereum wallet for the linux terminal.  Zeta is free and open-source software that allows developers to store and spend money directly in their terminal/server to pay for other software libraries and services using an API.  
 
 This is a mix between Geth and Metamask.  It is much lighter than geth since it does not mine or store the chain - it only talks to INFURA. Has a JSONRPC interface like geth.  
